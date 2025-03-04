@@ -4,4 +4,5 @@ rmm_log.txt
 __pycache__/
 zarr/
 .DS_Store
+._DS_Store
 docker/brev/docker-compose-3 - Copy.yaml
