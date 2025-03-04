@@ -52,15 +52,15 @@ Please click this button to deploy this Repo using Brev.dev's Launchables
 1. Click the **[Deploy button](https://console.brev.dev/launchable/deploy?launchableID=env-2tp8r85eUSapxWeqb5FKYxa9EB3)**: [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://console.brev.dev/launchable/deploy?launchableID=env-2tp8r85eUSapxWeqb5FKYxa9EB3)
 2. Click **Deploy Launchable**
 
-   ![deploy_brev](./assets/deploy_brev.png)
+   ![deploy_brev](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/deploy_brev.png)
    
 3. Wait for the Container status to be **Running** and the container to be **Built** (can take up to 8 minutes).  Then, click **Access**
 
-   ![go_on_green](./assets/go_on_green.png)
+   ![go_on_green](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/go_on_green.png)
    
 4. Scroll down to **Using Tunnels**, find port **8888**, and click on the **"Open in New Window" Icon** to jump into the RAPIDS Singlecell Brev.dev experience!
 
-   ![open_notebook](./assets/open_notebook.png)
+   ![open_notebook](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/open_notebook.png)
 
 ## Deploy on a CUDA compatible GPU system
 
