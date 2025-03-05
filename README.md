@@ -49,8 +49,9 @@ This repo is made to run as Brev.dev's Launchables, or a machine you own with a 
 ## Deploy Using [Brev](brev.dev)
 Please click this button to deploy this Repo using Brev.dev's Launchables
 
-1. Click the **[Deploy button](https://console.brev.dev/launchable/deploy?launchableID=env-2tp8r85eUSapxWeqb5FKYxa9EB3)**: [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://console.brev.dev/launchable/deploy?launchableID=env-2tp8r85eUSapxWeqb5FKYxa9EB3)
-2. Click **Deploy Launchable**
+1. Click [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/41nwZDb) (or the **Deploy Launchable** button above)
+
+2. Click **Deploy Launchable** on the Brev.dev Launchable page
 
    ![deploy_brev](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/deploy_brev.png)
    
