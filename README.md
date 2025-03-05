@@ -48,7 +48,7 @@ For those who are new to doing basic analysis for single cell data, the end to e
 ---
 
 This repo is made to run as Brev.dev's Launchables, or a machine you own with a local CUDA compatible GPU.  
-## Deploy Using [Brev](brev.dev)
+## Deploy Using [Brev](https://brev.dev)
 Please click this button to deploy this Repo using Brev.dev's Launchables
 
 1. For a **Standard Instance** (L40s), click here: [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/41nwZDb)  
