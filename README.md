@@ -7,7 +7,9 @@
 
 
 This repository houses the notebooks made to run on [RAPIDS-singlecell](https://rapids-singlecell.readthedocs.io/en/latest/), a GPU accelerated library developed by [scverse®](https://github.com/scverse).
-The goal is of this repository is to help users be able to try out and explore many different capabilities of RAPIDS-singlecell on cell datasets ranging from **250 thousand to 11 million cells** on thier own CUDA capabile GPU systems or on an instance of the quick deploy capability of Brev.dev Launchables.  
+The goal is of this repository is to help users be able to try out and explore many different capabilities of RAPIDS-singlecell on cell datasets ranging from **250 thousand to 11 million cells** on their own CUDA capabile GPU systems or on an instance of the quick deploy capability of [Brev.dev](https://developer.nvidia.com/brev) Launchables.
+
+These notebooks will be valuable for single-cell scientists who want to quickly evaluate ease of use as well as explore the biological interpretability of RAPIDS-singlecell results. Secondarily, scientists will find value in learning to apply these methods to very large data sets. This repository is also broadly useful for any data scientist or developer who wants to run and evaluate single cell methods leveraging RAPIDS-singlecell. Data sets used for this tutorial are were made [publicly available by 10X](https://www.10xgenomics.com/datasets) as well as [CZ cellxgene](https://cellxgene.cziscience.com/).
 
 If you like these notebooks and this GPU accelerated capability, and want to support scverse's efforts, please [learn more about them here](https://scverse.org/about/) as well as [consider joining their community](https://scverse.org/join/).
 
@@ -36,7 +38,7 @@ For those who are new to doing basic analysis for single cell data, the end to e
 | [spatial_autocorr](spatial_autocorr.ipynb) | An introduction to spatial transcriptomics analysis and visualization | 
 | [out-of-core_processing](out-of-core_processing.ipynb) | In this notebook, we show the scalability of the analysis toof up to 11M cells easily by using Dask.<br>**Requires a 48GB GPU** | 
 | [multi_gpu_large_data_showcase](multi_gpu_large_data_showcase.ipynb) | This notebook enhances the 11M cell dataset analysis with dask without exceeding memory limits.  <br>It fully scales to utilize all available GPUs, uses chunk-based execution, and efficiently manages memory<br>**Requires 8x A100s or better.  For all other GPUs systems, please run [out-of-core_processing](out-of-core_processing.ipynb) instead**| 
-| [demo_gpu-seuratv3](demo_gpu-seuratv3.ipynb) | In this notebook, show diveristy in capabiliy by run a similar workflow to [01_demo_gpu_e2e](01_demo_gpu_e2e.ipynb), but on brain cells | 
+| [demo_gpu-seuratv3](demo_gpu-seuratv3.ipynb) | In this notebook, show diversity in capability by run a similar workflow to [01_demo_gpu_e2e](01_demo_gpu_e2e.ipynb), but on brain cells | 
 | [demo_gpu-seuratv3-brain-1M](demo_gpu-seuratv3-brain-1M.ipynb) | In this notebook, we scale up the analysis of [demo_gpu-seuratv3](demo_gpu-seuratv3.ipynb) to 1 million brain cells.<br>**Requires an 80GB GPU, like an H100** | 
 
 <br>
@@ -70,7 +72,7 @@ Please click this button to deploy this Repo using Brev.dev's Launchables
 All provisioned systems need to be RAPIDS capable. Here's what is required:
 
 <i class="fas fa-microchip"></i> **GPU:** NVIDIA Volta™ or higher with [compute capability](https://developer.nvidia.com/cuda-gpus) 7.0+
-- For most of the notebooks, we recommend a **GPU with 24 GB VRAM or more**, due to the dataset size, such as the **L40S**, which can be quickly deployed here.  Some other common GPU options found in your workstations or favortie cloud service providers are:
+- For most of the notebooks, we recommend a **GPU with 24 GB VRAM or more**, due to the dataset size, such as the **L40S**, which can be quickly deployed here.  Some other common GPU options found in your workstations or favorite cloud service providers are:
   - A/H/B100
   - GH200
   - L40s
@@ -111,11 +113,7 @@ Please refer to the [RAPIDS Singlecell Install Guide](https://rapids-singlecell.
 ---
 
 
-### **Notebook 00: DO_FIRST - Data loading**
-
-Downloads the required data for this notebook
-
-### **Notebook 01: demo_gpu- End to End Workflow Example**
+### **Notebook 01_demo_gpu_e2e : Basic Demo Workflow**
 
 By the completion of this notebook, a user will be able to do the following:
 
@@ -156,15 +154,15 @@ By the completion of this notebook, a user will be able to do the following:
     - Trajectory analysis
         - Implement a diffusion map to understand the progress of cell types
 
-### **Notebook 02: decoupler- Transcriptional regulation examples**
+### **Notebook 02_decoupler - Decoupler-GPU: Accelerated Transcriptional Regulatory Analysis**
 
 This is an overview of methods that can be used to investigate transcriptional regulation. Although the tutorial does not dive deeply into these models, the notebook is used to reflect a difference in speed that is benefitted by GPU.
 
-### **Notebook 03: demo_gpu-PR - A different way to normalize**
+### **Notebook demo_gpu_e2e_with_PR - A different way to normalize with Pearson Residuals**
 
 By the completion of this notebook, a user will be able to remove unwanted sources of variation using Pearson Residuals to normalize. This is a different approach to analysis from Notebook 01. After filtering, we introduce a normalization step toa address the potential issues in how we previously removed unwanted sources of variation.
 
-### **Notebook 04: spatial_autocorr - Visualizing and investigating spatial transcriptomics data**
+### **Notebook spatial_autocorr - Visualizing and investigating spatial transcriptomics data**
 
 By the completion of this notebook, a user will be able to do the following:
 - Compute spatial autocorrelation, which represents how gene expression levels are spatially distributed across tissue sections.
@@ -172,7 +170,7 @@ By the completion of this notebook, a user will be able to do the following:
 - Compute two metrics using Moran's I (better for global structures) and Geary's C (better for local structures)
 - Explore the results visually by plotting the expression of genes Mbp (myelin-associated) and Nrgn (neuronal marker)
 
-### **Notebook 05: out-of-core - Scale analysis to 11M cells easily and quickly leveraging Dask**
+### **Notebook out-of-core_processing - Scale analysis to 11M cells easily and quickly leveraging Dask**
 
 By the completion of this notebook, a user will be able to do the following:
 - Create a local DASK cluster
@@ -182,9 +180,19 @@ By the completion of this notebook, a user will be able to do the following:
 - Scale gene expression
 - Compute PCA using GPU acceleration
 
-### **Notebook 06: multi_gpu_show - Scale analysis to 11M cells easily and quickly leveraging Dask**
+### **Notebook multi_gpu_large_data_showcase - Multi-GPU showcase using persist**
 
 By the completion of this notebook, a user will be able to perform the same steps as Notebook 05, but with the following:
 - Process massive single-cell datasets without exceeding memory limits
 - Fully utilize all available GPUs, scaling performance across multiple devices
 - Enable chunk-based execution, efficiently managing memory by loading only necessary data
+
+### **Notebook demo_gpu-seuratv3 - End to end example on Brain Cells**
+
+By the completion of this noteobok, a user will be able to perform similar steps to Notebook 01 (end to end demo) but on brain cells.
+
+### **Notebook demo_gpu-seuratv3-brain-1M - End to end example on 1M Brain Cells**
+
+By the completion of this noteobok, a user will be able to perform similar steps to demo_gpu-seuratv3 but on 1M brain cells.
+
+
