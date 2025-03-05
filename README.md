@@ -21,7 +21,7 @@ This repository contains a diverse set of notebooks to help get anyone started u
 
 
 
-![layout architecture](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/scdiagram.png)
+![layout architecture](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/scdiagram.png)
 
 
 The outline below is a suggested exploration flow.  Unless otherwise noted, you can choose any notebook to get started, as long as you have the GPU resources to run the notebook.
@@ -49,19 +49,20 @@ This repo is made to run as Brev.dev's Launchables, or a machine you own with a 
 ## Deploy Using [Brev](brev.dev)
 Please click this button to deploy this Repo using Brev.dev's Launchables
 
-1. Click [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/41nwZDb) (or the **Deploy Launchable** button above)
+1. For a **Standard Instance** (L40s), click here: [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/41nwZDb)  
+   For an **Large, Multi-GPU Instance** (8x H100),click here: [![ Click here to deploy.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/4i4mDz0).
 
 2. Click **Deploy Launchable** on the Brev.dev Launchable page
 
-   ![deploy_brev](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/deploy_brev.png)
+   ![deploy_brev](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/deploy_brev.png)
    
 3. Wait for the Container status to be **Running** and the container to be **Built** (can take up to 8 minutes).  Then, click **Access**
 
-   ![go_on_green](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/go_on_green.png)
+   ![go_on_green](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/go_on_green.png)
    
 4. Scroll down to **Using Tunnels**, find port **8888**, and click on the **"Open in New Window" Icon** to jump into the RAPIDS Singlecell Brev.dev experience!
 
-   ![open_notebook](https://github.com/tjchennv/rapids_singlecell-notebooks/raw/main/assets/open_notebook.png)
+   ![open_notebook](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/open_notebook.png)
 
 ## Deploy on a CUDA compatible GPU system
 
