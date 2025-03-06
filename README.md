@@ -37,7 +37,7 @@ For those who are new to doing basic analysis for single cell data, the end to e
 | [demo_gpu_e2e_with_PR](demo_gpu_e2e_with_PR.ipynb)  | End to end workflow, like [01_demo_gpu_e2e](01_demo_gpu_e2e.ipynb), but uses pearson residuals for normalization. | 24GB /<br>Standard RSC Instance |
 | [spatial_autocorr](spatial_autocorr.ipynb) | An introduction to spatial transcriptomics analysis and visualization | 24GB / Standard RSC Instance |
 | [out-of-core_processing](out-of-core_processing.ipynb) | In this notebook, we show the scalability of the analysis toof up to 11M cells easily by using Dask.<br>**Requires a 48GB GPU** | 48GB /<br>Standard RSC Instance |
-| [multi_gpu_large_data_showcase](multi_gpu_large_data_showcase.ipynb) | This notebook enhances the 11M cell dataset analysis with dask without exceeding memory limits.  <br>It fully scales to utilize all available GPUs, uses chunk-based execution, and efficiently manages memory<br>**Requires 8x A100s or better.  For all other GPUs systems, please run [out-of-core_processing](out-of-core_processing.ipynb) instead**| 8x 80GB /<br>Large RSC Instance |
+| [multi_gpu_large_data_showcase](multi_gpu_large_data_showcase.ipynb) | This notebook enhances the 11M cell dataset analysis with dask without exceeding memory limits.  <br>It fully scales to utilize all available GPUs, uses chunk-based execution, and efficiently manages memory<br>**Requires 8x H100s or better.  For all other GPUs systems, please run [out-of-core_processing](out-of-core_processing.ipynb) instead**| 8x 80GB /<br>Large RSC Instance |
 | [demo_gpu-seuratv3](demo_gpu-seuratv3.ipynb) | In this notebook, show diversity in capability by run a similar workflow to [01_demo_gpu_e2e](01_demo_gpu_e2e.ipynb), but on brain cells | 24GB /<br>Standard RSC Instance |
 | [demo_gpu-seuratv3-brain-1M](demo_gpu-seuratv3-brain-1M.ipynb) | In this notebook, we scale up the analysis of [demo_gpu-seuratv3](demo_gpu-seuratv3.ipynb) to 1 million brain cells.<br>**Requires an 80GB GPU, like an H100** |  80GB /<br>Large RSC Instance |
 
@@ -136,6 +136,15 @@ pip install -r requirements.txt
 
 For additional information on RAPIDS Singlecell please visit the [RAPIDS Singlecell Docs](https://rapids-singlecell.readthedocs.io/)
 For alternate installation instructions, please refer to the [RAPIDS Singlecell Install Guide](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html) to install using [pip](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html#pypi), [Conda](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html#conda), or [Docker](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html#docker)
+
+## Tips and Tricks
+1. If after clicking a "Healthy" Port 8888 link in `Deploy with Brev: Step 4`, JupyterLab does not start, please try again in a few seconds.  Also, sometimes, the page needs to be refreshed to update the status.
+2. Currently, restarting an instance, after stopping it, will start up far faster than starting a new instance.
+3. If you **Stop** the instance, all the data on the main storage will be retained for the next time you start it.
+4. To conserve GPU memory, please remember to shut down your completed notebook's kernel before starting a new notebook.
+5. If your data download gets interrupted, please delete the files you intended to download and try again
+6. The Standard RSC Instance (L40s) has 128GB of space (~90GB user usable).    
+7. The Large RSC Instance (8x h100) has the same 128GB of space as the Standard RSC Instance, but there is a speical `data` folder is mapped to a 1.12TB disk.  Data retention on that disk (in that folder) is not guaranteed.  YMMV.
 
 
 # Detailed Overview of the Notebooks
