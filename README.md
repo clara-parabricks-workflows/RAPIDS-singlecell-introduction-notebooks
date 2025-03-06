@@ -54,6 +54,8 @@ This repo is made to run as Brev.dev's Launchables, or a machine you own with a 
 ## Deploy Using [Brev](https://brev.dev)
 Please click this button to deploy this Repo using Brev.dev's Launchables
 
+### Using our Brev Launchable (super easy mode - highly recommended)
+
 1. For a **Standard RSC Instance** (L40s), click here: [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/41nwZDb)  
    For an **Large RSC Instance** (8x H100),click here: [![ Click here to deploy.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/4i4mDz0).
 
@@ -69,7 +71,27 @@ Please click this button to deploy this Repo using Brev.dev's Launchables
 
    ![open_notebook](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/open_notebook.png)
 
-## Deploy on a CUDA compatible GPU system
+You should drop into a fully installed and populated JupyterLab environment.  Open up your desired notebook, and have a great time!
+
+### Making this Launchable Portable on Brev (knowledgeable users only)
+If using Brev to create a new Launchable or Standalone Compute Instance, so that you can use your desired cloud provider: 
+- In **Compute**, remember the GPU requirements when picking an instance
+- When adding the **Container**, use Docker Compose.  In most cases, please use the docker-compose file, **[docker/brev/docker-compose-nb-2412.yaml](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/docker/brev/docker-compose-nb-2412.yaml)** as your base.  You *can* make edits, but will not be a recommended activity.  Instead use and install additional packages using the `requirements.txt` found in this repo as a base.  **Do not** Preinstall Jupyter.
+- For **Files**, please clone this repo, or any repo of your choosing
+- In **Ports**, please open ports **8888, 8787, and 8786**.
+Git is not installed in this container, but can be installed into the container when it is running using
+```
+apt update
+apt install git -y
+```
+
+Of course, if all you want is to install additional packages, it is easiest to just use the [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/41nwZDb)  and install your additional software from there!
+
+## Deploy on a CUDA compatible GPU system (knowledgeable users only)
+
+Some people wmay want to have this expereince off of Brev and take it with you.  Great!  Here's a (somewhat) easy way how!  
+
+If you are provisioning this on a non-brev cloud instance, workstation, or local machine, please follow the steps below:
 
 ### 1. Provision a System Meeting These Requirements
 All provisioned systems need to be RAPIDS capable. Here's what is required:
@@ -138,13 +160,13 @@ For additional information on RAPIDS Singlecell please visit the [RAPIDS Singlec
 For alternate installation instructions, please refer to the [RAPIDS Singlecell Install Guide](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html) to install using [pip](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html#pypi), [Conda](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html#conda), or [Docker](https://rapids-singlecell.readthedocs.io/en/latest/Installation.html#docker)
 
 ## Tips and Tricks
-1. If after clicking a "Healthy" Port 8888 link in `Deploy with Brev: Step 4`, JupyterLab does not start, please try again in a few seconds.  Also, sometimes, the page needs to be refreshed to update the status.
+1. If after clicking a "Healthy" Port 8888 link in `Deploy with Brev: Step 4`, JupyterLab does not start, or the notebooks don't show, please try again in a few seconds.  There is a known issue where there system needs a minute or two Also, sometimes, the page needs to be refreshed to update the status.
 2. Currently, restarting an instance, after stopping it, will start up far faster than starting a new instance.
 3. If you **Stop** the instance, all the data on the main storage will be retained for the next time you start it.
 4. To conserve GPU memory, please remember to shut down your completed notebook's kernel before starting a new notebook.
 5. If your data download gets interrupted, please delete the files you intended to download and try again
 6. The Standard RSC Instance (L40s) has 128GB of space (~90GB user usable).    
-7. The Large RSC Instance (8x h100) has the same 128GB of space as the Standard RSC Instance, but there is a speical `data` folder is mapped to a 1.12TB disk.  Data retention on that disk (in that folder) is not guaranteed.  YMMV.
+7. The Large RSC Instance (8x H100) has the same 128GB of space as the Standard RSC Instance, but there is a special `data` folder is mapped to a 1.12TB disk.  Data retention on that disk (in that folder) is not guaranteed.  YMMV.
 
 
 # Detailed Overview of the Notebooks
