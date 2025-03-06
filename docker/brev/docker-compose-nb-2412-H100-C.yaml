@@ -22,7 +22,7 @@ services:
       - "0.0.0.0:8787:8787"      # Dask dashboard
       - "0.0.0.0:8786:8786"      # Dask scheduler
     volumes:
-      - /home/ubuntu/rapids_singlecell-notebooks:/notebooks/
+      - /home/ubuntu/RAPIDS-singlecell-introduction-notebooks:/notebooks/
       - /ephemeral:/notebooks/data
     user: root
     working_dir: /notebooks
