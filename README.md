@@ -63,11 +63,11 @@ Please click this button to deploy this Repo using Brev.dev's Launchables
 
    ![deploy_brev](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/deploy_brev.png)
    
-3. Wait for the Container status to be **Running** and the container to be **Built** (can take up to 8 minutes).  Then, click **Access**
+3. Wait for the Container status show **Ready** (can take up to 8 minutes).  Then, click **Access GPU**
 
    ![go_on_green](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/go_on_green.png)
    
-4. Scroll down to **Using Tunnels**, find port **8888**, and click on the **"Open in New Window" Icon** to jump into the RAPIDS Singlecell Brev.dev experience!
+4. On the **Instance** page, click **Open Notebook**
 
    ![open_notebook](https://github.com/clara-parabricks-workflows/RAPIDS-singlecell-introduction-notebooks/raw/main/assets/open_notebook.png)
 
