@@ -57,7 +57,7 @@ Please click this button to deploy this Repo using Brev.dev's Launchables
 ### Using our Brev Launchable (super easy mode - highly recommended)
 
 1. For a **Standard RSC Instance** (L40s), click here: [![ Click here to deploy the RAPIDS Singlecell Launchable.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/4kr01um)  
-   For an **Large RSC Instance** (8x H100),click here: [![ Click here to deploy.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/4h6vbo1).
+   For a **Large RSC Instance** (8x H100),click here: [![ Click here to deploy.](https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg)](https://nvda.ws/4h6vbo1).
 
 2. Click **Deploy Launchable** on the Brev.dev Launchable page
 
